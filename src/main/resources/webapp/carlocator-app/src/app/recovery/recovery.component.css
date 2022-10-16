@@ -1,0 +1,38 @@
+
+.card{
+    border: none;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsla(186, 48%, 58%, 1);
+    background: linear-gradient(90deg, hsla(186, 48%, 58%, 1) 0%, hsla(39, 47%, 58%, 1) 100%);
+}
+
+.card h1, h6 {
+    color: #16213E;
+    font-family: 'Manrope', sans-serif;
+}
+h1 {
+    font-size: 36px;
+    font-weight: 900;
+}
+button {
+    font-weight: bold;
+    font-size: 20px;
+    color: #D8D9CF;
+}
+label {
+    color: #000;
+}
+a {
+    color: #16213E;
+}
+@media only screen and (max-device-width: 500px) {
+    .card{
+        width: 300px;
+    }
+    
+}
