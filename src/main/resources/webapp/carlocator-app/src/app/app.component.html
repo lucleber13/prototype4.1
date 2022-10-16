@@ -1,1 +1,59 @@
-<router-outlet></router-outlet>
+<div id="app">
+    <nav class="navbar navbar-expand-lg" style="background-color: hsla(186, 48%, 58%, 1);">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/images/logo_toyota_icon.png" alt="Logo" width="28" height="30" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 22px;">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item"> <!--*ngIf="showSalesBoard"-->
+                        <a class="nav-link" href="#">Sales</a>
+                    </li>
+                    <li class="nav-item"> <!--*ngIf="showWorkshopBoard"-->
+                        <a class="nav-link" href="#">Workshop</a>
+                    </li>
+                    <li class="nav-item"> <!--*ngIf="showValetingBoard"-->
+                        <a class="nav-link" href="#">Valeting</a>
+                    </li>
+                    <li class="nav-item"> <!--*ngIf="showAdminBoard"-->
+                        <a class="nav-link" href="#">Admin</a>
+                    </li>
+                </ul>
+            </div>
+            <div class=access style="font-size: 22px;">
+                <ul class="navbar-nav"> <!--*ngIf="!isLoggedIn" -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" routerLink="login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup" routerLink="register">Signup</a>
+                    </li>
+                </ul> 
+
+                <ul class="navbar-nav"> <!--*ngIf="isLoggedIn"-->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" routerLink="profile"></a> <!--{{ username }} -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/signup" ></a> <!--(click)="logout()">Logout-->
+                    </li>
+                </ul> 
+
+            </div> 
+        </div>
+    </nav>
+    
+    <div class="container">
+        <router-outlet></router-outlet>
+    </div>      
+       
+</div>
+
+
+
